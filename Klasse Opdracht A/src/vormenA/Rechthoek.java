@@ -1,4 +1,4 @@
-package vormen;
+package vormenA;
 
 public class Rechthoek extends Vorm {
 	

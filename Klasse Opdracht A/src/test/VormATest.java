@@ -5,9 +5,9 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import vormen.*;
+import vormenA.*;
 
-public class VormTest {
+public class VormATest {
 	
 	Vorm vierkant;
 	Vorm cirkel;
