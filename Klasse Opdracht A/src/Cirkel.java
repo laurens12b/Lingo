@@ -4,16 +4,20 @@ public class Cirkel {
 	private double omtrek;
 	
 	public Cirkel() {
-		straal = 0;
 	}
+	
+	public Cirkel(double straal) {
+		this.straal = straal;
+		this.omtrek = straal * 2 * Math.PI;
+	}
+	
 	
 	public void setStraal(double straal) {
 		this.straal = straal;
+		this.omtrek = straal * 2 * Math.PI;
 	}
 	
 	public String toString() {
-		omtrek = 2*Math.PI*straal;
-		String omtrekString = String.valueOf(omtrek);
-		return "De omtrek is " + omtrekString;
+		return "De omtrek is: " + omtrek;
 	}
 }

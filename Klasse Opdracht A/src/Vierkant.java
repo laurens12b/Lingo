@@ -1,31 +1,25 @@
 
 public class Vierkant {
-	private double width;
-	private double height;
+	private double side;
 	private double omtrek;
 	
 	Vierkant() {
-		width = 0;
-		height = 0;
-		omtrek = 0;
 	}
 	
 	public double getWidth() {
-		return width;
+		return side;
 	}
 	
 	public double getHeight() {
-		return height;
+		return side;
 	}
 	
-	public void setVierkant(double zijde) {
-		width = zijde;
-		height = zijde;
+	public void setVierkant(double side) {
+		this.side = side;
+		this.omtrek = side * 4;
 	}
 	
 	public String toString() {
-		omtrek = 2*(width+height);
-		String omtrekString = String.valueOf(omtrek);
-		return "De omtrek is " + omtrekString;
+		return "De omtrek is: " + omtrek;
 	}
 }

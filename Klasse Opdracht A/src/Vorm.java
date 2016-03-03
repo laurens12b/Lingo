@@ -1,6 +1,8 @@
 
 public class Vorm {
+	
 	public static void main(String args[]) {
+		
 		Vierkant vierkant = new Vierkant();
 		Cirkel cirkel = new Cirkel();
 		Rechthoek rechthoek = new Rechthoek();

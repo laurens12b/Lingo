@@ -5,19 +5,15 @@ public class Rechthoek {
 	private double omtrek;
 	
 	Rechthoek() {
-		width = 0;
-		height = 0;
-		omtrek = 0;
 	}
 	
 	public void setRechthoek(double width, double height) {
 		this.width = width;
 		this.height = height;
+		this.omtrek = 2 * (width + height);
 	}
 	
 	public String toString() {
-		omtrek = 2*(width+height);
-		String omtrekString = String.valueOf(omtrek);
-		return "De omtrek is " + omtrekString;
+		return "De omtrek is: " + omtrek;
 	}
 }
