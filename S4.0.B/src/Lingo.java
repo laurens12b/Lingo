@@ -15,6 +15,7 @@ import javax.swing.JTextField;
 
 public class Lingo extends JPanel {
 	private JButton check;
+	private JButton quit;
 	private JTextField invoer, uitvoer1, uitvoer2, uitvoer3, uitvoer4, uitvoer5, endresult;
 	private List<StringBuffer> woordenLijst = new ArrayList<StringBuffer>();
 	private List<StringBuffer> oplossingsLijst = new ArrayList<StringBuffer>();
@@ -27,6 +28,9 @@ public class Lingo extends JPanel {
 	public Lingo() {
 		check = new JButton("check");
 		check.addActionListener(new CheckHandler());
+		
+		quit = new JButton("quit");
+		quit.addActionListener(new quitHandler());
 		
 		invoer = new JTextField(6);
 		
@@ -52,6 +56,7 @@ public class Lingo extends JPanel {
 		add(uitvoer4);
 		add(uitvoer5);
 		add(endresult);
+		add(quit);
 		
 		raadwoord = getWord("6letterwoorden.txt");
 		System.out.println(raadwoord);
@@ -87,9 +92,6 @@ public class Lingo extends JPanel {
 		} catch( IOException e ) {
 		   	System.out.println( "Fout bij het lezen of sluiten bestand" );
 		   	e.printStackTrace();
-		} catch( Exception e ) {
-		   	System.out.println( "Fout bij het lezen of sluiten bestand" );
-		    e.printStackTrace();
 		}
 		index=(int) ( Math.random()*(aantalwoorden - 1));
 		System.out.println(index + "   aantalwoorden = " + aantalwoorden);
@@ -152,6 +154,11 @@ public class Lingo extends JPanel {
 		      
 		     
 		      
+		}
+	}
+	class quitHandler implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			System.exit(0);
 		}
 	}
 }
